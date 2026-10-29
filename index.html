@@ -2,68 +2,41 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Kebijakan Privasi game Kehidupan Petani Sawit oleh Haer Games."
-  >
-  <meta name="robots" content="index,follow">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kebijakan Privasi game Kehidupan Petani Sawit oleh Haer Games.">
   <title>Kebijakan Privasi — Kehidupan Petani Sawit</title>
 
   <style>
-    :root {
-      --accent: #ffb300;
-      --accent-dark: #8a5c00;
-      --text: #252525;
-      --muted: #66615a;
-      --bg: #fffaf0;
-      --card: #ffffff;
-      --border: #f0dfb4;
-      --accent-soft: #fff1c9;
-    }
-
     * {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family:
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
+      color: #292929;
+      background: #fffaf0;
     }
 
     header {
-      padding: 42px 20px 34px;
-      color: #252525;
-      background: linear-gradient(135deg, #ffca3a, var(--accent));
-      border-bottom: 1px solid #e5a000;
+      background: #ffc107;
+      padding: 30px 20px;
     }
 
-    .wrap {
-      width: min(900px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    .header-row {
+    .header-container {
+      max-width: 900px;
+      margin: auto;
       display: flex;
-      gap: 24px;
-      align-items: flex-start;
       justify-content: space-between;
+      align-items: center;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
     header h1 {
-      margin: 0 0 8px;
-      font-size: clamp(1.8rem, 5vw, 2.6rem);
-      line-height: 1.2;
+      margin: 0 0 5px;
+      font-size: 30px;
     }
 
     header p {
@@ -71,53 +44,47 @@
     }
 
     .language-switch {
-      display: inline-flex;
-      gap: 4px;
-      padding: 4px;
-      border: 1px solid rgba(37, 37, 37, 0.2);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.55);
-      flex-shrink: 0;
+      display: flex;
+      gap: 8px;
+      position: relative;
+      z-index: 10;
     }
 
     .language-switch button {
-      border: 0;
-      border-radius: 999px;
-      padding: 9px 14px;
-      font: inherit;
-      font-weight: 700;
+      padding: 10px 16px;
+      border: 2px solid #292929;
+      border-radius: 8px;
+      background: white;
+      color: #292929;
+      font-size: 14px;
+      font-weight: bold;
       cursor: pointer;
-      color: #252525;
-      background: transparent;
+      pointer-events: auto;
+      touch-action: manipulation;
     }
 
-    .language-switch button[aria-pressed="true"] {
-      background: #252525;
-      color: #fff;
-    }
-
-    .language-switch button:focus-visible {
-      outline: 3px solid #fff;
-      outline-offset: 2px;
+    .language-switch button.active {
+      background: #292929;
+      color: white;
     }
 
     main {
-      margin: 28px auto 48px;
-      padding: clamp(20px, 5vw, 38px);
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 8px 28px rgba(90, 62, 0, 0.07);
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      background: white;
+      border: 1px solid #eee0bd;
+      border-radius: 12px;
     }
 
     h2 {
       margin-top: 30px;
-      color: var(--accent-dark);
-      font-size: 1.22rem;
+      color: #805600;
+      font-size: 21px;
     }
 
-    h2:first-child {
-      margin-top: 0;
+    h2:first-of-type {
+      margin-top: 20px;
     }
 
     a {
@@ -125,398 +92,287 @@
       overflow-wrap: anywhere;
     }
 
-    a:hover {
-      color: #533800;
-    }
-
     .updated {
-      color: var(--muted);
-      font-size: 0.95rem;
+      color: #666;
+      font-size: 14px;
     }
 
     footer {
-      padding: 0 20px 30px;
+      padding: 20px;
       text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
+      color: #666;
+      font-size: 14px;
     }
 
-    @media (max-width: 520px) {
-      .header-row {
+    @media (max-width: 600px) {
+      .header-container {
         display: block;
       }
 
       .language-switch {
-        margin-top: 22px;
+        margin-top: 20px;
+      }
+
+      main {
+        margin: 16px;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 25px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap header-row">
-      <div>
-        <h1 data-i18n="pageTitle">Kebijakan Privasi</h1>
-        <p data-i18n="subtitle">
-          Kehidupan Petani Sawit · Haer Games
-        </p>
-      </div>
 
-      <nav class="language-switch" aria-label="Language selector">
-        <button
-          type="button"
-          id="btn-id"
-          aria-pressed="true"
-          onclick="setLanguage('id')"
-        >
-          Indonesia
-        </button>
-
-        <button
-          type="button"
-          id="btn-en"
-          aria-pressed="false"
-          onclick="setLanguage('en')"
-        >
-          English
-        </button>
-      </nav>
+<header>
+  <div class="header-container">
+    <div>
+      <h1 id="page-title">Kebijakan Privasi</h1>
+      <p id="subtitle">Kehidupan Petani Sawit · Haer Games</p>
     </div>
-  </header>
-
-  <main class="wrap">
-    <p class="updated">
-      <strong data-i18n="lastUpdatedLabel">
-        Terakhir diperbarui:
-      </strong>
-      <span data-i18n="lastUpdatedDate">
-        29 Oktober 2026
-      </span>
-    </p>
-
-    <p data-i18n="intro">
-      Kebijakan Privasi ini menjelaskan bagaimana informasi ditangani saat
-      Anda menggunakan game <strong>Kehidupan Petani Sawit</strong> yang
-      dikembangkan oleh <strong>Haer Games</strong>.
-    </p>
-
-    <p data-i18n="consent">
-      Dengan mengunduh atau memainkan game ini, Anda menyatakan telah
-      membaca dan memahami Kebijakan Privasi ini. Jika Anda tidak
-      menyetujuinya, hentikan penggunaan game ini.
-    </p>
-
-    <h2 data-i18n="h1">
-      1. Data Permainan dan Penyimpanan Lokal
-    </h2>
-
-    <p data-i18n="p1">
-      Progres permainan dan data terkait permainan disimpan secara lokal
-      di perangkat Anda. Saat ini, game ini tidak menggunakan server milik
-      pengembang untuk menyimpan progres permainan atau informasi pemain.
-      Data lokal dapat hilang jika aplikasi dihapus, data aplikasi dihapus
-      melalui pengaturan perangkat, atau perangkat mengalami kerusakan.
-    </p>
-
-    <h2 data-i18n="h2">
-      2. Iklan dan Google AdMob
-    </h2>
-
-    <p data-i18n="p2">
-      Game ini menggunakan Google AdMob untuk menampilkan iklan, termasuk
-      iklan banner dan iklan berhadiah apabila fitur tersebut tersedia.
-      Bergantung pada konfigurasi iklan dan perangkat, Google AdMob dan
-      mitranya dapat memproses informasi seperti pengenal iklan, informasi
-      perangkat, alamat IP, dan interaksi dengan iklan. Informasi tersebut
-      dapat digunakan untuk menayangkan atau mengukur iklan, mencegah
-      aktivitas tidak valid, serta menjalankan layanan terkait.
-    </p>
-
-    <p data-i18n="p3">
-      Untuk informasi lebih lanjut, baca
-      <a
-        href="https://policies.google.com/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Kebijakan Privasi Google</a>
-      dan kunjungi
-      <a
-        href="https://support.google.com/admob/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Pusat Bantuan Google AdMob</a>.
-      Google AdMob merupakan layanan pihak ketiga dan pemrosesan datanya
-      tunduk pada kebijakan Google serta pengaturan iklan yang diterapkan
-      pada game ini.
-    </p>
-
-    <h2 data-i18n="h3">
-      3. Pembelian Dalam Aplikasi
-    </h2>
-
-    <p data-i18n="p4">
-      Game ini dapat menyediakan pembelian dalam aplikasi, misalnya fitur
-      untuk menghapus iklan, apabila fitur tersebut tersedia. Transaksi
-      diproses melalui Google Play. Pengembang tidak meminta pemain
-      memasukkan detail kartu pembayaran secara langsung ke dalam game.
-      Penanganan transaksi dan informasi pembayaran mengikuti
-      <a
-        href="https://policies.google.com/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Kebijakan Privasi Google</a>
-      serta
-      <a
-        href="https://play.google.com/about/play-terms/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Persyaratan Layanan Google Play</a>.
-    </p>
-
-    <h2 data-i18n="h4">
-      4. Informasi yang Dikumpulkan Pengembang
-    </h2>
-
-    <p data-i18n="p5">
-      Game ini tidak menyediakan akun pemain atau penyimpanan progres
-      melalui server milik pengembang saat ini. Progres permainan disimpan
-      secara lokal. Namun, layanan pihak ketiga seperti Google AdMob dapat
-      mengumpulkan atau memproses data sebagaimana dijelaskan dalam bagian
-      iklan di atas.
-    </p>
-
-    <h2 data-i18n="h5">
-      5. Keamanan dan Penghapusan Data
-    </h2>
-
-    <p data-i18n="p6">
-      Karena progres permainan disimpan secara lokal, Anda dapat menghapus
-      data lokal dengan menghapus data aplikasi melalui pengaturan
-      perangkat atau dengan mencopot pemasangan aplikasi. Tindakan
-      tersebut dapat menghapus progres permainan yang tersimpan. Data
-      yang diproses oleh layanan pihak ketiga tunduk pada kebijakan dan
-      mekanisme pengelolaan data penyedia layanan tersebut.
-    </p>
 
-    <h2 data-i18n="h6">
-      6. Privasi Anak
-    </h2>
+    <div class="language-switch" aria-label="Pilihan bahasa">
+      <button type="button" id="btn-id" class="active" aria-pressed="true">
+        Indonesia
+      </button>
 
-    <p data-i18n="p7">
-      Kehidupan Petani Sawit adalah game simulasi bertani tanpa kekerasan
-      yang ditujukan untuk pemain berusia 8 tahun ke atas. Karena anak-anak
-      dapat memainkan game ini, pengembang harus menetapkan target audiens
-      yang sesuai di Google Play Console dan mengonfigurasi Google AdMob
-      serta layanan pihak ketiga sesuai kebijakan Google Play untuk
-      keluarga dan anak-anak.
+      <button type="button" id="btn-en" aria-pressed="false">
+        English
+      </button>
+    </div>
+  </div>
+</header>
 
-      Pengaturan iklan harus meminta perlakuan yang sesuai untuk anak-anak
-      apabila diwajibkan, termasuk pengaturan Child-Directed Treatment
-      (TFCD) atau Tag for Under the Age of Consent (TFUA) sesuai ketentuan
-      yang berlaku.
+<main>
+  <p class="updated">
+    <strong id="updated-label">Terakhir diperbarui:</strong>
+    <span id="updated-date">29 Oktober 2026</span>
+  </p>
 
-      Pengembang juga harus menggunakan pengaturan iklan yang sesuai
-      untuk audiens anak dan tidak dengan sengaja meminta penayangan iklan
-      yang tidak pantas bagi anak-anak atau iklan yang dipersonalisasi
-      apabila hal tersebut dilarang oleh kebijakan yang berlaku.
+  <p id="intro"></p>
+  <p id="consent"></p>
 
-      Game ini tidak meminta anak-anak mengirimkan informasi pribadi
-      secara langsung kepada pengembang melalui akun atau formulir di
-      dalam game. Namun, Google AdMob dan penyedia pihak ketiga lainnya
-      tetap dapat memproses data sesuai konfigurasi layanan dan kebijakan
-      masing-masing.
+  <h2 id="h1"></h2>
+  <p id="p1"></p>
 
-      Pernyataan ini menjelaskan kebijakan yang harus diterapkan dan tidak
-      menggantikan kewajiban untuk benar-benar mengonfigurasi SDK, target
-      audiens, iklan, serta pengumpulan data sesuai aturan yang berlaku.
-    </p>
+  <h2 id="h2"></h2>
+  <p id="p2"></p>
+  <p id="p3"></p>
 
-    <h2 data-i18n="h7">
-      7. Perubahan Kebijakan Privasi
-    </h2>
+  <h2 id="h3"></h2>
+  <p id="p4"></p>
 
-    <p data-i18n="p8">
-      Kebijakan Privasi ini dapat diperbarui apabila fitur game,
-      penggunaan layanan pihak ketiga, atau persyaratan yang berlaku
-      berubah. Versi terbaru akan dipublikasikan di halaman ini, bersama
-      tanggal pembaruan.
-    </p>
+  <h2 id="h4"></h2>
+  <p id="p5"></p>
 
-    <h2 data-i18n="h8">
-      8. Hubungi Kami
-    </h2>
+  <h2 id="h5"></h2>
+  <p id="p6"></p>
 
-    <p data-i18n="p9">
-      Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini,
-      hubungi pengembang melalui alamat email dukungan yang tercantum
-      pada halaman Kehidupan Petani Sawit di Google Play.
-    </p>
+  <h2 id="h6"></h2>
+  <p id="p7"></p>
 
-    <p>
-      <strong data-i18n="developerLabel">Pengembang:</strong>
-      Haer Games
-      <br>
+  <h2 id="h7"></h2>
+  <p id="p8"></p>
 
-      <strong data-i18n="gameLabel">Nama game:</strong>
-      Kehidupan Petani Sawit
-    </p>
-  </main>
+  <h2 id="h8"></h2>
+  <p id="p9"></p>
 
-  <footer data-i18n="footer">
-    &copy; 2026 Haer Games. Kebijakan Privasi Kehidupan Petani Sawit.
-  </footer>
+  <p>
+    <strong id="developer-label">Pengembang:</strong> Haer Games<br>
+    <strong id="game-label">Nama game:</strong> Kehidupan Petani Sawit
+  </p>
+</main>
 
-  <script>
-    const translations = {
-      id: {
-        pageTitle: "Kebijakan Privasi",
-        subtitle: "Kehidupan Petani Sawit · Haer Games",
+<footer id="footer">
+  © 2026 Haer Games. Kebijakan Privasi Kehidupan Petani Sawit.
+</footer>
 
-        lastUpdatedLabel: "Terakhir diperbarui:",
-        lastUpdatedDate: "29 Oktober 2026",
+<script>
+(function () {
+  "use strict";
 
-        intro: 'Kebijakan Privasi ini menjelaskan bagaimana informasi ditangani saat Anda menggunakan game <strong>Kehidupan Petani Sawit</strong> yang dikembangkan oleh <strong>Haer Games</strong>.',
+  const translations = {
+    id: {
+      pageTitle: "Kebijakan Privasi",
+      subtitle: "Kehidupan Petani Sawit · Haer Games",
+      updatedLabel: "Terakhir diperbarui:",
+      updatedDate: "29 Oktober 2026",
 
-        consent: "Dengan mengunduh atau memainkan game ini, Anda menyatakan telah membaca dan memahami Kebijakan Privasi ini. Jika Anda tidak menyetujuinya, hentikan penggunaan game ini.",
+      intro: 'Kebijakan Privasi ini menjelaskan bagaimana informasi ditangani saat Anda menggunakan game <strong>Kehidupan Petani Sawit</strong> yang dikembangkan oleh <strong>Haer Games</strong>.',
 
-        h1: "1. Data Permainan dan Penyimpanan Lokal",
+      consent: "Dengan mengunduh atau memainkan game ini, Anda menyatakan telah membaca dan memahami Kebijakan Privasi ini. Jika Anda tidak menyetujuinya, hentikan penggunaan game ini.",
 
-        p1: "Progres permainan dan data terkait permainan disimpan secara lokal di perangkat Anda. Saat ini, game ini tidak menggunakan server milik pengembang untuk menyimpan progres permainan atau informasi pemain. Data lokal dapat hilang jika aplikasi dihapus, data aplikasi dihapus melalui pengaturan perangkat, atau perangkat mengalami kerusakan.",
+      h1: "1. Data Permainan dan Penyimpanan Lokal",
 
-        h2: "2. Iklan dan Google AdMob",
+      p1: "Progres permainan dan data terkait permainan disimpan secara lokal di perangkat Anda. Saat ini, game ini tidak menggunakan server milik pengembang untuk menyimpan progres permainan atau informasi pemain. Data lokal dapat hilang jika aplikasi dihapus, data aplikasi dihapus melalui pengaturan perangkat, atau perangkat mengalami kerusakan.",
 
-        p2: "Game ini menggunakan Google AdMob untuk menampilkan iklan, termasuk iklan banner dan iklan berhadiah apabila fitur tersebut tersedia. Bergantung pada konfigurasi iklan dan perangkat, Google AdMob dan mitranya dapat memproses informasi seperti pengenal iklan, informasi perangkat, alamat IP, dan interaksi dengan iklan. Informasi tersebut dapat digunakan untuk menayangkan atau mengukur iklan, mencegah aktivitas tidak valid, serta menjalankan layanan terkait.",
+      h2: "2. Iklan dan Google AdMob",
 
-        p3: 'Untuk informasi lebih lanjut, baca <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a> dan kunjungi <a href="https://support.google.com/admob/" target="_blank" rel="noopener noreferrer">Pusat Bantuan Google AdMob</a>. Google AdMob merupakan layanan pihak ketiga dan pemrosesan datanya tunduk pada kebijakan Google serta pengaturan iklan yang diterapkan pada game ini.',
+      p2: "Game ini menggunakan Google AdMob untuk menampilkan iklan, termasuk iklan banner dan iklan berhadiah apabila fitur tersebut tersedia. Bergantung pada konfigurasi iklan dan perangkat, Google AdMob dan mitranya dapat memproses informasi seperti pengenal iklan, informasi perangkat, alamat IP, dan interaksi dengan iklan. Informasi tersebut dapat digunakan untuk menayangkan atau mengukur iklan, mencegah aktivitas tidak valid, serta menjalankan layanan terkait.",
 
-        h3: "3. Pembelian Dalam Aplikasi",
+      p3: 'Untuk informasi lebih lanjut, baca <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a> dan kunjungi <a href="https://support.google.com/admob/" target="_blank" rel="noopener noreferrer">Pusat Bantuan Google AdMob</a>. Google AdMob merupakan layanan pihak ketiga dan pemrosesan datanya tunduk pada kebijakan Google serta pengaturan iklan yang diterapkan pada game ini.',
 
-        p4: 'Game ini dapat menyediakan pembelian dalam aplikasi, misalnya fitur untuk menghapus iklan, apabila fitur tersebut tersedia. Transaksi diproses melalui Google Play. Pengembang tidak meminta pemain memasukkan detail kartu pembayaran secara langsung ke dalam game. Penanganan transaksi dan informasi pembayaran mengikuti <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a> serta <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Persyaratan Layanan Google Play</a>.',
+      h3: "3. Pembelian Dalam Aplikasi",
 
-        h4: "4. Informasi yang Dikumpulkan Pengembang",
+      p4: 'Game ini dapat menyediakan pembelian dalam aplikasi, misalnya fitur untuk menghapus iklan, apabila fitur tersebut tersedia. Transaksi diproses melalui Google Play. Pengembang tidak meminta pemain memasukkan detail kartu pembayaran secara langsung ke dalam game. Penanganan transaksi dan informasi pembayaran mengikuti <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a> serta <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Persyaratan Layanan Google Play</a>.',
 
-        p5: "Game ini tidak menyediakan akun pemain atau penyimpanan progres melalui server milik pengembang saat ini. Progres permainan disimpan secara lokal. Namun, layanan pihak ketiga seperti Google AdMob dapat mengumpulkan atau memproses data sebagaimana dijelaskan dalam bagian iklan di atas.",
+      h4: "4. Informasi yang Dikumpulkan Pengembang",
 
-        h5: "5. Keamanan dan Penghapusan Data",
+      p5: "Game ini tidak menyediakan akun pemain atau penyimpanan progres melalui server milik pengembang saat ini. Progres permainan disimpan secara lokal. Namun, layanan pihak ketiga seperti Google AdMob dapat mengumpulkan atau memproses data sebagaimana dijelaskan dalam bagian iklan di atas.",
 
-        p6: "Karena progres permainan disimpan secara lokal, Anda dapat menghapus data lokal dengan menghapus data aplikasi melalui pengaturan perangkat atau dengan mencopot pemasangan aplikasi. Tindakan tersebut dapat menghapus progres permainan yang tersimpan. Data yang diproses oleh layanan pihak ketiga tunduk pada kebijakan dan mekanisme pengelolaan data penyedia layanan tersebut.",
+      h5: "5. Keamanan dan Penghapusan Data",
 
-        h6: "6. Privasi Anak",
+      p6: "Karena progres permainan disimpan secara lokal, Anda dapat menghapus data lokal dengan menghapus data aplikasi melalui pengaturan perangkat atau dengan mencopot pemasangan aplikasi. Tindakan tersebut dapat menghapus progres permainan yang tersimpan. Data yang diproses oleh layanan pihak ketiga tunduk pada kebijakan dan mekanisme pengelolaan data penyedia layanan tersebut.",
 
-        p7: "Kehidupan Petani Sawit adalah game simulasi bertani tanpa kekerasan yang ditujukan untuk pemain berusia 8 tahun ke atas. Karena anak-anak dapat memainkan game ini, pengembang harus menetapkan target audiens yang sesuai di Google Play Console dan mengonfigurasi Google AdMob serta layanan pihak ketiga sesuai kebijakan Google Play untuk keluarga dan anak-anak. Pengaturan iklan harus meminta perlakuan yang sesuai untuk anak-anak apabila diwajibkan, termasuk pengaturan Child-Directed Treatment (TFCD) atau Tag for Under the Age of Consent (TFUA) sesuai ketentuan yang berlaku. Pengembang juga harus menggunakan pengaturan iklan yang sesuai untuk audiens anak dan tidak dengan sengaja meminta penayangan iklan yang tidak pantas bagi anak-anak atau iklan yang dipersonalisasi apabila hal tersebut dilarang oleh kebijakan yang berlaku. Game ini tidak meminta anak-anak mengirimkan informasi pribadi secara langsung kepada pengembang melalui akun atau formulir di dalam game. Namun, Google AdMob dan penyedia pihak ketiga lainnya tetap dapat memproses data sesuai konfigurasi layanan dan kebijakan masing-masing. Pernyataan ini menjelaskan kebijakan yang harus diterapkan dan tidak menggantikan kewajiban untuk benar-benar mengonfigurasi SDK, target audiens, iklan, serta pengumpulan data sesuai aturan yang berlaku.",
+      h6: "6. Privasi Anak",
 
-        h7: "7. Perubahan Kebijakan Privasi",
+      p7: "Kehidupan Petani Sawit adalah game simulasi bertani tanpa kekerasan yang ditujukan untuk pemain berusia 8 tahun ke atas. Karena anak-anak dapat memainkan game ini, pengembang harus menetapkan target audiens yang sesuai di Google Play Console dan mengonfigurasi Google AdMob serta layanan pihak ketiga sesuai kebijakan Google Play untuk keluarga dan anak-anak. Pengaturan iklan harus meminta perlakuan yang sesuai untuk anak-anak apabila diwajibkan, termasuk pengaturan Child-Directed Treatment (TFCD) atau Tag for Under the Age of Consent (TFUA) sesuai ketentuan yang berlaku. Pengembang juga harus menggunakan pengaturan iklan yang sesuai untuk audiens anak dan tidak dengan sengaja meminta penayangan iklan yang tidak pantas bagi anak-anak atau iklan yang dipersonalisasi apabila hal tersebut dilarang oleh kebijakan yang berlaku. Game ini tidak meminta anak-anak mengirimkan informasi pribadi secara langsung kepada pengembang melalui akun atau formulir di dalam game. Namun, Google AdMob dan penyedia pihak ketiga lainnya tetap dapat memproses data sesuai konfigurasi layanan dan kebijakan masing-masing. Pernyataan ini menjelaskan kebijakan yang harus diterapkan dan tidak menggantikan kewajiban untuk benar-benar mengonfigurasi SDK, target audiens, iklan, serta pengumpulan data sesuai aturan yang berlaku.",
 
-        p8: "Kebijakan Privasi ini dapat diperbarui apabila fitur game, penggunaan layanan pihak ketiga, atau persyaratan yang berlaku berubah. Versi terbaru akan dipublikasikan di halaman ini, bersama tanggal pembaruan.",
+      h7: "7. Perubahan Kebijakan Privasi",
 
-        h8: "8. Hubungi Kami",
+      p8: "Kebijakan Privasi ini dapat diperbarui apabila fitur game, penggunaan layanan pihak ketiga, atau persyaratan yang berlaku berubah. Versi terbaru akan dipublikasikan di halaman ini, bersama tanggal pembaruan.",
 
-        p9: "Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, hubungi pengembang melalui alamat email dukungan yang tercantum pada halaman Kehidupan Petani Sawit di Google Play.",
+      h8: "8. Hubungi Kami",
 
-        developerLabel: "Pengembang:",
-        gameLabel: "Nama game:",
+      p9: "Jika Anda memiliki pertanyaan mengenai Kebijakan Privasi ini, hubungi pengembang melalui alamat email dukungan yang tercantum pada halaman Kehidupan Petani Sawit di Google Play.",
 
-        footer: "© 2026 Haer Games. Kebijakan Privasi Kehidupan Petani Sawit."
-      },
+      developerLabel: "Pengembang:",
+      gameLabel: "Nama game:",
+      footer: "© 2026 Haer Games. Kebijakan Privasi Kehidupan Petani Sawit."
+    },
 
-      en: {
-        pageTitle: "Privacy Policy",
-        subtitle: "Kehidupan Petani Sawit · Haer Games",
+    en: {
+      pageTitle: "Privacy Policy",
+      subtitle: "Kehidupan Petani Sawit · Haer Games",
+      updatedLabel: "Last updated:",
+      updatedDate: "October 29, 2026",
 
-        lastUpdatedLabel: "Last updated:",
-        lastUpdatedDate: "October 29, 2026",
+      intro: 'This Privacy Policy explains how information is handled when you use <strong>Kehidupan Petani Sawit</strong>, a game developed by <strong>Haer Games</strong>.',
 
-        intro: 'This Privacy Policy explains how information is handled when you use <strong>Kehidupan Petani Sawit</strong>, a game developed by <strong>Haer Games</strong>.',
+      consent: "By downloading or playing this game, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, stop using the game.",
 
-        consent: "By downloading or playing this game, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, stop using the game.",
+      h1: "1. Game Data and Local Storage",
 
-        h1: "1. Game Data and Local Storage",
+      p1: "Game progress and related game data are stored locally on your device. The game currently does not use a developer-owned server to store game progress or player information. Local data may be lost if you uninstall the app, clear the app data in your device settings, or the device is damaged.",
 
-        p1: "Game progress and related game data are stored locally on your device. The game currently does not use a developer-owned server to store game progress or player information. Local data may be lost if you uninstall the app, clear the app data in your device settings, or experience device damage.",
+      h2: "2. Advertising and Google AdMob",
 
-        h2: "2. Advertising and Google AdMob",
+      p2: "This game uses Google AdMob to display ads, including banner and rewarded ads where those features are available. Depending on ad configuration and your device, Google AdMob and its partners may process information such as advertising identifiers, device information, IP address, and ad interactions. This information may be used to serve or measure ads, prevent invalid activity, and provide related services.",
 
-        p2: "This game uses Google AdMob to display ads, including banner and rewarded ads where those features are available. Depending on ad configuration and your device, Google AdMob and its partners may process information such as advertising identifiers, device information, IP address, and ad interactions. This information may be used to serve or measure ads, prevent invalid activity, and provide related services.",
+      p3: 'For more information, read the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and visit the <a href="https://support.google.com/admob/" target="_blank" rel="noopener noreferrer">Google AdMob Help Center</a>. Google AdMob is a third-party service, and its data processing is subject to Google policies and the advertising settings applied to this game.',
 
-        p3: 'For more information, read the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and visit the <a href="https://support.google.com/admob/" target="_blank" rel="noopener noreferrer">Google AdMob Help Center</a>. Google AdMob is a third-party service, and its data processing is subject to Google's policies and the advertising settings applied to this game.',
+      h3: "3. In-App Purchases",
 
-        h3: "3. In-App Purchases",
+      p4: 'The game may offer in-app purchases, such as a remove-ads feature, if available. Transactions are processed through Google Play. The developer does not ask players to enter payment card details directly into the game. Transactions and payment information are handled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.',
 
-        p4: 'The game may offer in-app purchases, such as a remove-ads feature, if available. Transactions are processed through Google Play. The developer does not ask players to enter payment card details directly into the game. Transactions and payment information are handled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a>.',
+      h4: "4. Information Collected by the Developer",
 
-        h4: "4. Information Collected by the Developer",
+      p5: "The game currently does not provide player accounts or server-based game progress storage operated by the developer. Game progress is stored locally. However, third-party services such as Google AdMob may collect or process data as described in the advertising section above.",
 
-        p5: "The game currently does not provide player accounts or server-based game progress storage operated by the developer. Game progress is stored locally. However, third-party services such as Google AdMob may collect or process data as described in the advertising section above.",
+      h5: "5. Data Security and Deletion",
 
-        h5: "5. Data Security and Deletion",
+      p6: "Because game progress is stored locally, you can delete local data by clearing the app data in your device settings or uninstalling the app. This may delete saved game progress. Data processed by third-party services is subject to those providers’ data handling policies and mechanisms.",
 
-        p6: "Because game progress is stored locally, you can delete local data by clearing the app data in your device settings or uninstalling the app. This may delete saved game progress. Data processed by third-party services is subject to those providers' data handling policies and mechanisms.",
+      h6: "6. Children’s Privacy",
 
-        h6: "6. Children's Privacy",
+      p7: "Kehidupan Petani Sawit is a non-violent farming simulation game intended for players aged 8 and older. Because children may play this game, the developer must set the appropriate target audience in Google Play Console and configure Google AdMob and third-party services in accordance with applicable Google Play Families and children’s policies. Where required, advertising settings must request the appropriate treatment for children, including Child-Directed Treatment (TFCD) or Tag for Under the Age of Consent (TFUA), as applicable. The developer must also use advertising settings appropriate for a child audience and must not knowingly request ads that are unsuitable for children or personalized ads where prohibited by applicable policies. The game does not ask children to submit personal information directly to the developer through an in-game account or form. However, Google AdMob and other third-party providers may still process data according to their service settings and policies. This statement describes practices that must be implemented and does not replace the obligation to actually configure the SDK, target audience, ads, and data practices in accordance with applicable requirements.",
 
-        p7: "Kehidupan Petani Sawit is a non-violent farming simulation game intended for players aged 8 and older. Because children may play this game, the developer must set the appropriate target audience in Google Play Console and configure Google AdMob and third-party services in accordance with applicable Google Play Families and children's policies. Where required, advertising settings must request the appropriate treatment for children, including Child-Directed Treatment (TFCD) or Tag for Under the Age of Consent (TFUA), as applicable. The developer must also use advertising settings appropriate for a child audience and must not knowingly request ads that are unsuitable for children or personalized ads where prohibited by applicable policies. The game does not ask children to submit personal information directly to the developer through an in-game account or form. However, Google AdMob and other third-party providers may still process data according to their service settings and policies. This statement describes practices that must be implemented and does not replace the obligation to actually configure the SDK, target audience, ads, and data practices in accordance with applicable requirements.",
+      h7: "7. Changes to This Privacy Policy",
 
-        h7: "7. Changes to This Privacy Policy",
+      p8: "This Privacy Policy may be updated if the game’s features, use of third-party services, or applicable requirements change. The latest version will be published on this page along with the updated date.",
 
-        p8: "This Privacy Policy may be updated if the game's features, use of third-party services, or applicable requirements change. The latest version will be published on this page along with the updated date.",
+      h8: "8. Contact Us",
 
-        h8: "8. Contact Us",
+      p9: "If you have questions about this Privacy Policy, contact the developer using the support email listed on the Kehidupan Petani Sawit page on Google Play.",
 
-        p9: "If you have questions about this Privacy Policy, contact the developer using the support email listed on the Kehidupan Petani Sawit page on Google Play.",
-
-        developerLabel: "Developer:",
-        gameLabel: "Game title:",
-
-        footer: "© 2026 Haer Games. Privacy Policy for Kehidupan Petani Sawit."
-      }
-    };
-
-    function setLanguage(lang) {
-      const dictionary = translations[lang] || translations.id;
-
-      document.documentElement.lang = lang;
-
-      document.title = lang === "en"
-        ? "Privacy Policy — Kehidupan Petani Sawit"
-        : "Kebijakan Privasi — Kehidupan Petani Sawit";
-
-      document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-
-        if (dictionary[key] !== undefined) {
-          element.innerHTML = dictionary[key];
-        }
-      });
-
-      document
-        .getElementById("btn-id")
-        .setAttribute("aria-pressed", String(lang === "id"));
-
-      document
-        .getElementById("btn-en")
-        .setAttribute("aria-pressed", String(lang === "en"));
-
-      try {
-        localStorage.setItem("haerPrivacyLanguage", lang);
-      } catch (e) {
-        // Halaman tetap berfungsi jika penyimpanan browser tidak tersedia.
-      }
+      developerLabel: "Developer:",
+      gameLabel: "Game title:",
+      footer: "© 2026 Haer Games. Privacy Policy for Kehidupan Petani Sawit."
     }
+  };
 
-    let initialLanguage = "id";
+  const elementIds = [
+    "page-title", "subtitle", "updated-label", "updated-date",
+    "intro", "consent",
+    "h1", "p1", "h2", "p2", "p3", "h3", "p4",
+    "h4", "p5", "h5", "p6", "h6", "p7",
+    "h7", "p8", "h8", "p9",
+    "developer-label", "game-label", "footer"
+  ];
+
+  const keyMap = {
+    "page-title": "pageTitle",
+    "updated-label": "updatedLabel",
+    "updated-date": "updatedDate",
+    "developer-label": "developerLabel",
+    "game-label": "gameLabel"
+  };
+
+  function setLanguage(language) {
+    const selected = translations[language] ? language : "id";
+    const dictionary = translations[selected];
+
+    elementIds.forEach(function (id) {
+      const key = keyMap[id] || id;
+      const element = document.getElementById(id);
+
+      if (element && dictionary[key] !== undefined) {
+        element.innerHTML = dictionary[key];
+      }
+    });
+
+    document.documentElement.lang = selected;
+
+    document.title = selected === "en"
+      ? "Privacy Policy — Kehidupan Petani Sawit"
+      : "Kebijakan Privasi — Kehidupan Petani Sawit";
+
+    document.getElementById("btn-id").classList.toggle("active", selected === "id");
+    document.getElementById("btn-en").classList.toggle("active", selected === "en");
+
+    document.getElementById("btn-id").setAttribute(
+      "aria-pressed",
+      String(selected === "id")
+    );
+
+    document.getElementById("btn-en").setAttribute(
+      "aria-pressed",
+      String(selected === "en")
+    );
 
     try {
-      const savedLanguage = localStorage.getItem("haerPrivacyLanguage");
-
-      if (savedLanguage === "id" || savedLanguage === "en") {
-        initialLanguage = savedLanguage;
-      }
-    } catch (e) {
-      // Gunakan bahasa Indonesia jika penyimpanan browser tidak tersedia.
+      localStorage.setItem("haerPrivacyLanguage", selected);
+    } catch (error) {
+      // Bahasa tetap berfungsi jika localStorage tidak tersedia.
     }
+  }
 
-    setLanguage(initialLanguage);
-  </script>
+  document.getElementById("btn-id").addEventListener("click", function () {
+    setLanguage("id");
+  });
+
+  document.getElementById("btn-en").addEventListener("click", function () {
+    setLanguage("en");
+  });
+
+  let initialLanguage = "id";
+
+  try {
+    const savedLanguage = localStorage.getItem("haerPrivacyLanguage");
+
+    if (savedLanguage === "id" || savedLanguage === "en") {
+      initialLanguage = savedLanguage;
+    }
+  } catch (error) {
+    // Gunakan bahasa Indonesia jika localStorage tidak tersedia.
+  }
+
+  setLanguage(initialLanguage);
+})();
+</script>
+
 </body>
 </html>
